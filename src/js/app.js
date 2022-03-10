@@ -23,6 +23,7 @@ import "../style/index.css";
     }
  */
 function render(variables = {}) {
+  debugger;
   console.log("These are the current variables: ", variables); //print on the console
   // here we ask the logical questions to make decisions on how to build the html
   // if includeCover==false then we reset the cover code without the <img> tag to make the cover transparent.
@@ -33,7 +34,7 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <h1>${variables.name} </h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
           <ul class="position-right">
@@ -44,6 +45,7 @@ function render(variables = {}) {
           </ul>
         </div>
     `;
+  debugger;
 }
 
 /**
